@@ -1,9 +1,11 @@
 import React from 'react';
 
+import './ninjas.css';
+
 
 
 const Ninjas = (props) => {
-        const{ninjas}= props;
+        const{ninjas, deleteNinja}= props;
         //const ninjaList = ninjas.map(ninja => {
             //     if (ninja.age > 20) {
             //     return(
@@ -37,6 +39,7 @@ const Ninjas = (props) => {
                             <div>name:{ninja.name}</div>
                             <div>age: {ninja.age}</div>
                             <div>belt: {ninja.belt}</div>
+                            <button onClick={()=>{deleteNinja(ninja.id)}} >Delete Ninja</button>
                         </div> 
                     ) : null
                 })
